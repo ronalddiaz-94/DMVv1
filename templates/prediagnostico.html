@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valoración</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+        }
+        .titulo{
+            padding: 15px;
+        }
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+        .boton{
+            border: 2px solid black;
+            text-decoration: none;
+            color: black;
+            border-radius: 10px;
+            padding: 12px;
+            width: 150px;
+            text-align: center;
+            margin-top: 12px;
+            background-color: black;
+            color: white;
+        }
+        .btn{
+            border: 0 solid;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+            outline: 1px solid;
+            outline-color: black;
+            outline-offset: 0px;
+            text-shadow: none;
+            transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .btn:hover {
+            border: 1px solid;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.2);
+            outline-color: rgba(255, 255, 255, 0);
+            outline-offset: 15px;
+            text-shadow: 1px 1px 2px #000000;
+            text-decoration: none;
+            background-color: white;
+        }
+        h3{
+            text-align: center;
+        }
+        .sintomas{
+            border: 1px solid white;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: white;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body background="{{url_for('static', filename='fondo.png')}}">
+    <div class="container-fluid d-flex justify-content-center titulo">
+        <h3>Selecciona los síntomas que presentas</h3>
+    </div>
+    <div class="container">
+        <form action="/diagnostico" method="post">
+            <div class="container row sintomas">
+                <div class="container-fluid col d-flex flex-column">
+                    <div class="form-check">
+                        <label for="sintoma1"><input type="checkbox" id="sintoma1" name="sintoma1" value="Aumento de peso"> Aumento de peso</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma2"><input type="checkbox" id="sintoma2"name="sintoma2"  value="Debilidad muscular"> Debilidad muscular</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma3"><input type="checkbox" id="sintoma3" name="sintoma3" value="Depresión"> Depresión</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma4"><input type="checkbox" id="sintoma4" name="sintoma4" value="Desorientación"> Desorientación</label>    
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma5"><input type="checkbox" id="sintoma5" name="sintoma5" value="Diarrea"> Diarrea</label>    
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma6"><input type="checkbox" id="sintoma6" name="sintoma6" value="Dificultad para respirar"> Dificultad para respirar</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma7"><input type="checkbox" id="sintoma7" name="sintoma7" value="Dolor Abdominal"> Dolor Abdominal</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma8"><input type="checkbox" id="sintoma8" name="sintoma8" value="Dolor Abdominal Inferior"> Dolor del abdomen inferior</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma9"><input type="checkbox" id="sintoma9" name="sintoma9" value="Dolor abdominal superior"> Dolor del abdomen superior</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma10"><input type="checkbox" id="sintoma10" name="sintoma10" value="Dolor al orinar"> Dolor al orinar</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma11"><input type="checkbox" id="sintoma11" name="sintoma11" value="Dolor articular"> Dolor articular</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma12"><input type="checkbox" id="sintoma12" name="sintoma12" value="Dolor de cabeza"> Dolor de cabeza</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma13"><input type="checkbox" id="sintoma13" name="sintoma13" value="Dolor de espalda"> Dolor de espalda</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma14"><input type="checkbox" id="sintoma14" name="sintoma14" value="Dolor de hombros"> Dolor de hombros</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma15"><input type="checkbox" id="sintoma15" name="sintoma15" value="Dolor de oído"> Dolor de oído</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma16"><input type="checkbox" id="sintoma16" name="sintoma16" value="Dolor de pecho al respirar"> Dolor de pecho al respirar</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma17"><input type="checkbox" id="sintoma17" name="sintoma17" value="Dolor estomacal"> Dolor estomacal</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma18"><input type="checkbox" id="sintoma18" name="sintoma18" value="Dolor muscular"> Dolor muscular</label>
+                    </div>
+                </div>
+                <div class="container-fluid col-sm d-flex flex-column">
+                    <div class="form-check">
+                        <label for="sintoma19"><input type="checkbox" id="sintoma19" name="sintoma19" value="Dolor o presion en cara"> Dolor o presion en cara</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma20"><input type="checkbox" id="sintoma20" name="sintoma20" value="Escalofríos"> Escalofríos</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma21"><input type="checkbox" id="sintoma21" name="sintoma21" value="Falta de aire"> Falta de aire</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma22"><input type="checkbox" id="sintoma22" name="sintoma22" value="Falta de apetito"> Falta de apetito</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma23"><input type="checkbox" id="sintoma23" name="sintoma23" value="Falta de concentracion"> Falta de concentracion</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma24"><input type="checkbox" id="sintoma24" name="sintoma24" value="Fatiga"> Fatiga</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma25"><input type="checkbox" id="sintoma25" name="sintoma25" value="Fiebre"> Fiebre</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma26"><input type="checkbox" id="sintoma26" name="sintoma26" value="Flatulencia"> Flatulencia</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma27"><input type="checkbox" id="sintoma27" name="sintoma27" value="Heces de color arcilla o gris"> Heces de color arcilla o gris</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma28"><input type="checkbox" id="sintoma28" name="sintoma28" value="Hinchazón Abdominal"> Hinchazón Abdominal</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma29"><input type="checkbox" id="sintoma29" name="sintoma29" value="Ictericia"> Ictericia</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma30"><input type="checkbox" id="sintoma30" name="sintoma30" value="Inquietud"> Inquietud</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma31"><input type="checkbox" id="sintoma31" name="sintoma31" value="Irritabilidad"> Irritabilidad</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma32"><input type="checkbox" id="sintoma32" name="sintoma32" value="Mal aliento"> Mal aliento</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma33"><input type="checkbox" id="sintoma33" name="sintoma33" value="Más Hambre"> Más Hambre</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma34"><input type="checkbox" id="sintoma34" name="sintoma34" value="Moqueo"> Moqueo</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma35"><input type="checkbox" id="sintoma35" name="sintoma35" value="Nausea"> Nausea</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma36"></label><input type="checkbox" id="sintoma36" name="sintoma36" value="Necesidad de orinar con frecuencia"> Necesidad de orinar con frecuencia</label>
+                    </div>
+                </div>
+                <div class="container-fluid col d-flex flex-column">
+                    <div class="form-check">
+                        <label for="sintoma37"><input type="checkbox" id="sintoma37" name="sintoma37" value="Nerviosismo"> Nerviosismo</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma38"><input type="checkbox" id="sintoma38" name="sintoma38" value="Orina con sangre"> Orina con sangre</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma39"><input type="checkbox" id="sintoma39" name="sintoma39" value="Orina turbia con olor desagradable"> Orina turbia con olor desagradable</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma40"><input type="checkbox" id="sintoma40" name="sintoma40" value="Perdida de olfato"> Perdida de olfato</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma41"><input type="checkbox" id="sintoma41" name="sintoma41" value="Perdida de peso"> Perdida de peso</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma42"><input type="checkbox" id="sintoma42" name="sintoma42" value="Perdida del gusto"> Perdida del gusto</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma43"><input type="checkbox" id="sintoma43" name="sintoma43" value="Piel seca"> Piel seca</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma44"><input type="checkbox" id="sintoma44" name="sintoma44" value="Preocupación"> Preocupación</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma45"><input type="checkbox" id="sintoma45" name="sintoma45" value="Problemas de sueño"> Problemas de sueño</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma46"><input type="checkbox" id="sintoma46" name="sintoma46" value="Problemas de memoria"> Problemas de memoria</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma47"><input type="checkbox" id="sintoma47" name="sintoma47" value="Sensibilidad al calor"> Sensibilidad al calor</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma48"><input type="checkbox" id="sintoma48" name="sintoma48" value="Sensibilidad al frío"> Sensibilidad al frío</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma49"><input type="checkbox" id="sintoma49" name="sintoma49" value="Sibilancia al respirar"> Sibilancia al respirar</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma50"><input type="checkbox" id="sintoma50" name="sintoma50" value="Sudoración"> Sudoración</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma51"><input type="checkbox" id="sintoma51" name="sintoma51" value="Temperatura corporal baja"> Temperatura corporal baja</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma52"><input type="checkbox" id="sintoma52" name="sintoma52" value="Tos">Tos</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma53"><input type="checkbox" id="sintoma53" name="sintoma53" value="Tos con flema"> Tos con flema</label>
+                    </div>
+                    <div class="form-check">
+                        <label for="sintoma54"><input type="checkbox" id="sintoma54" name="sintoma54" value="Vómito"> Vómito</label>
+                    </div>
+                </div>
+            </div>  
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="boton btn" data-toggle="modal" data-target="#myModal">Diagnosticar</button>
+            </div>       
+            
+        </form>
+    </div>
+    <div class="container"> 
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header text-center">
+                <h4>PROCESANDO SU INFORMACIÓN</h4>
+                <div class="spinner-border text-info text-center"></div> 
+                <hr>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body text-center">
+                
+                <h5>Estamos valorando sus síntomas para generar un diagnóstico, espere un momento..</h5>
+              </div>              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+   
+</body>
+</html>
