@@ -9,7 +9,7 @@ click==8.1.3
 colorama==0.4.6
 experta==1.9.4
 Flask==2.3.2
-frozendict==2.1.2
+frozendict>=1.2
 frozenlist==1.3.3
 idna==3.4
 itsdangerous==2.1.2
@@ -25,3 +25,4 @@ tqdm==4.65.0
 urllib3==2.0.2
 Werkzeug==2.3.4
 yarl==1.9.2
+frozendict>=2.0.2
