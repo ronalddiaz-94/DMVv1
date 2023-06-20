@@ -56,4 +56,5 @@ def diagn():
     
 
 if __name__ == '__main__':
+    print("El puerto es :", config("PORT") )
     app.run(debug=False, port=config("PORT"))
