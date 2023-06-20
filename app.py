@@ -56,4 +56,4 @@ def diagn():
     
 
 if __name__ == '__main__':
-    app.run(debug=False, port=process.env.PORT)
+    app.run(debug=False, port=config("PORT"))
